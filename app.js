@@ -36,7 +36,7 @@ function getCountry(){
          document.getElementById('countries').selectedIndex = indexTürkiye; // varsayılan türkiye gelir.
 
          getCity(2) // Türkiye ID'si
-    })
+    }).catch(err => alert("Çok fazla istek yapıldı. 100 per 1 day"))
 }
 
 function getCity(countryId){
@@ -62,7 +62,7 @@ function getCity(countryId){
                     document.getElementById('cities').selectedIndex = 0
                     getCounty(data[0].SehirID)
                 }
-            })
+            }).catch(err => alert("Çok fazla istek yapıldı"))
 }
 
 function getCounty(cityId){
@@ -77,7 +77,7 @@ function getCounty(cityId){
         }
 
         document.getElementById('counties').innerHTML = html;
-    })
+    }).catch(err => alert("Çok fazla istek yapıldı"))
 }
 
 
