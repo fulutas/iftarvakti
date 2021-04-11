@@ -1,1 +1,1 @@
-# iftarvakti
+# İftar vakti uygulaması
